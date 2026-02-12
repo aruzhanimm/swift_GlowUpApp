@@ -16,7 +16,6 @@
 |:---:|:---:|:---:|
 | <img src="docs/screenshots/home.png" width="250" alt="Home Screen"> | <img src="docs/screenshots/search.png" width="250" alt="Search Screen"> | <img src="docs/screenshots/details.png" width="250" alt="Details Screen"> |
 
-*(Note: Add screenshots to a `docs/screenshots` folder in your repo to make these images appear)*
 
 ---
 
