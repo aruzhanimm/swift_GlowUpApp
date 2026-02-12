@@ -10,15 +10,6 @@
 
 ---
 
-## Screenshots
-
-| Home Feed | Search & Filter | Product Details |
-|:---:|:---:|:---:|
-| <img src="docs/screenshots/home.png" width="250" alt="Home Screen"> | <img src="docs/screenshots/search.png" width="250" alt="Search Screen"> | <img src="docs/screenshots/details.png" width="250" alt="Details Screen"> |
-
-
----
-
 ## Key Features
 
 * **Dark & Neon UI System:** A custom-built design system with deep blacks and neon accents for a premium feel.
