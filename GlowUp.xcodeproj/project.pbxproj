@@ -6,15 +6,17 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8C2CF8B72F3E81FB00023243 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8C2CF8B62F3E81FB00023243 /* FirebaseCrashlytics */; };
+		8C2CF8B92F3E81FF00023243 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8C2CF8B82F3E81FF00023243 /* FirebaseAnalytics */; };
+		8C56D8432F3BB25900A9CD03 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8C56D8422F3BB25900A9CD03 /* Kingfisher */; };
+		8C56D86B2F3BBF3E00A9CD03 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8C56D86A2F3BBF3E00A9CD03 /* FirebaseAuth */; };
+		8C56D86D2F3BBF4200A9CD03 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 8C56D86C2F3BBF4200A9CD03 /* FirebaseDatabase */; };
+		8C56D86F2F3BBF5A00A9CD03 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 8C56D86E2F3BBF5A00A9CD03 /* FirebaseCore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
-		8C56D8122F3BB00C00A9CD03 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8C56D7F72F3BB00A00A9CD03 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8C56D7FE2F3BB00A00A9CD03;
-			remoteInfo = GlowUp;
-		};
-		8C56D81C2F3BB00C00A9CD03 /* PBXContainerItemProxy */ = {
+		8C56D88E2F3BCC6100A9CD03 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8C56D7F72F3BB00A00A9CD03 /* Project object */;
 			proxyType = 1;
@@ -25,8 +27,7 @@
 
 /* Begin PBXFileReference section */
 		8C56D7FF2F3BB00A00A9CD03 /* GlowUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlowUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C56D8112F3BB00C00A9CD03 /* GlowUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GlowUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C56D81B2F3BB00C00A9CD03 /* GlowUpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GlowUpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C56D88A2F3BCC6000A9CD03 /* GlowUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GlowUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -35,14 +36,9 @@
 			path = GlowUp;
 			sourceTree = "<group>";
 		};
-		8C56D8142F3BB00C00A9CD03 /* GlowUpTests */ = {
+		8C56D88B2F3BCC6000A9CD03 /* GlowUpTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = GlowUpTests;
-			sourceTree = "<group>";
-		};
-		8C56D81E2F3BB00C00A9CD03 /* GlowUpUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = GlowUpUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -52,17 +48,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C56D86D2F3BBF4200A9CD03 /* FirebaseDatabase in Frameworks */,
+				8C56D8432F3BB25900A9CD03 /* Kingfisher in Frameworks */,
+				8C2CF8B92F3E81FF00023243 /* FirebaseAnalytics in Frameworks */,
+				8C2CF8B72F3E81FB00023243 /* FirebaseCrashlytics in Frameworks */,
+				8C56D86F2F3BBF5A00A9CD03 /* FirebaseCore in Frameworks */,
+				8C56D86B2F3BBF3E00A9CD03 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8C56D80E2F3BB00C00A9CD03 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8C56D8182F3BB00C00A9CD03 /* Frameworks */ = {
+		8C56D8872F3BCC6000A9CD03 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,8 +71,8 @@
 			isa = PBXGroup;
 			children = (
 				8C56D8012F3BB00A00A9CD03 /* GlowUp */,
-				8C56D8142F3BB00C00A9CD03 /* GlowUpTests */,
-				8C56D81E2F3BB00C00A9CD03 /* GlowUpUITests */,
+				8C56D88B2F3BCC6000A9CD03 /* GlowUpTests */,
+				8C56D8692F3BBF3E00A9CD03 /* Frameworks */,
 				8C56D8002F3BB00A00A9CD03 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,10 +81,16 @@
 			isa = PBXGroup;
 			children = (
 				8C56D7FF2F3BB00A00A9CD03 /* GlowUp.app */,
-				8C56D8112F3BB00C00A9CD03 /* GlowUpTests.xctest */,
-				8C56D81B2F3BB00C00A9CD03 /* GlowUpUITests.xctest */,
+				8C56D88A2F3BCC6000A9CD03 /* GlowUpTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8C56D8692F3BBF3E00A9CD03 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,56 +113,39 @@
 			);
 			name = GlowUp;
 			packageProductDependencies = (
+				8C56D8422F3BB25900A9CD03 /* Kingfisher */,
+				8C56D86A2F3BBF3E00A9CD03 /* FirebaseAuth */,
+				8C56D86C2F3BBF4200A9CD03 /* FirebaseDatabase */,
+				8C56D86E2F3BBF5A00A9CD03 /* FirebaseCore */,
+				8C2CF8B62F3E81FB00023243 /* FirebaseCrashlytics */,
+				8C2CF8B82F3E81FF00023243 /* FirebaseAnalytics */,
 			);
 			productName = GlowUp;
 			productReference = 8C56D7FF2F3BB00A00A9CD03 /* GlowUp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8C56D8102F3BB00C00A9CD03 /* GlowUpTests */ = {
+		8C56D8892F3BCC6000A9CD03 /* GlowUpTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8C56D8282F3BB00C00A9CD03 /* Build configuration list for PBXNativeTarget "GlowUpTests" */;
+			buildConfigurationList = 8C56D8902F3BCC6100A9CD03 /* Build configuration list for PBXNativeTarget "GlowUpTests" */;
 			buildPhases = (
-				8C56D80D2F3BB00C00A9CD03 /* Sources */,
-				8C56D80E2F3BB00C00A9CD03 /* Frameworks */,
-				8C56D80F2F3BB00C00A9CD03 /* Resources */,
+				8C56D8862F3BCC6000A9CD03 /* Sources */,
+				8C56D8872F3BCC6000A9CD03 /* Frameworks */,
+				8C56D8882F3BCC6000A9CD03 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8C56D8132F3BB00C00A9CD03 /* PBXTargetDependency */,
+				8C56D88F2F3BCC6100A9CD03 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				8C56D8142F3BB00C00A9CD03 /* GlowUpTests */,
+				8C56D88B2F3BCC6000A9CD03 /* GlowUpTests */,
 			);
 			name = GlowUpTests;
 			packageProductDependencies = (
 			);
 			productName = GlowUpTests;
-			productReference = 8C56D8112F3BB00C00A9CD03 /* GlowUpTests.xctest */;
+			productReference = 8C56D88A2F3BCC6000A9CD03 /* GlowUpTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		8C56D81A2F3BB00C00A9CD03 /* GlowUpUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8C56D82B2F3BB00C00A9CD03 /* Build configuration list for PBXNativeTarget "GlowUpUITests" */;
-			buildPhases = (
-				8C56D8172F3BB00C00A9CD03 /* Sources */,
-				8C56D8182F3BB00C00A9CD03 /* Frameworks */,
-				8C56D8192F3BB00C00A9CD03 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8C56D81D2F3BB00C00A9CD03 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				8C56D81E2F3BB00C00A9CD03 /* GlowUpUITests */,
-			);
-			name = GlowUpUITests;
-			packageProductDependencies = (
-			);
-			productName = GlowUpUITests;
-			productReference = 8C56D81B2F3BB00C00A9CD03 /* GlowUpUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -176,11 +160,7 @@
 					8C56D7FE2F3BB00A00A9CD03 = {
 						CreatedOnToolsVersion = 26.2;
 					};
-					8C56D8102F3BB00C00A9CD03 = {
-						CreatedOnToolsVersion = 26.2;
-						TestTargetID = 8C56D7FE2F3BB00A00A9CD03;
-					};
-					8C56D81A2F3BB00C00A9CD03 = {
+					8C56D8892F3BCC6000A9CD03 = {
 						CreatedOnToolsVersion = 26.2;
 						TestTargetID = 8C56D7FE2F3BB00A00A9CD03;
 					};
@@ -195,14 +175,17 @@
 			);
 			mainGroup = 8C56D7F62F3BB00A00A9CD03;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				8C56D8412F3BB25900A9CD03 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				8C56D8642F3BBDC700A9CD03 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8C56D8002F3BB00A00A9CD03 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				8C56D7FE2F3BB00A00A9CD03 /* GlowUp */,
-				8C56D8102F3BB00C00A9CD03 /* GlowUpTests */,
-				8C56D81A2F3BB00C00A9CD03 /* GlowUpUITests */,
+				8C56D8892F3BCC6000A9CD03 /* GlowUpTests */,
 			);
 		};
 /* End PBXProject section */
@@ -215,14 +198,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8C56D80F2F3BB00C00A9CD03 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8C56D8192F3BB00C00A9CD03 /* Resources */ = {
+		8C56D8882F3BCC6000A9CD03 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -239,14 +215,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8C56D80D2F3BB00C00A9CD03 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8C56D8172F3BB00C00A9CD03 /* Sources */ = {
+		8C56D8862F3BCC6000A9CD03 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -256,15 +225,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8C56D8132F3BB00C00A9CD03 /* PBXTargetDependency */ = {
+		8C56D88F2F3BCC6100A9CD03 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8C56D7FE2F3BB00A00A9CD03 /* GlowUp */;
-			targetProxy = 8C56D8122F3BB00C00A9CD03 /* PBXContainerItemProxy */;
-		};
-		8C56D81D2F3BB00C00A9CD03 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8C56D7FE2F3BB00A00A9CD03 /* GlowUp */;
-			targetProxy = 8C56D81C2F3BB00C00A9CD03 /* PBXContainerItemProxy */;
+			targetProxy = 8C56D88E2F3BCC6100A9CD03 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -450,14 +414,13 @@
 			};
 			name = Release;
 		};
-		8C56D8292F3BB00C00A9CD03 /* Debug */ = {
+		8C56D8912F3BCC6100A9CD03 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kz.aitu.aruzhan.GlowUpTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -471,14 +434,13 @@
 			};
 			name = Debug;
 		};
-		8C56D82A2F3BB00C00A9CD03 /* Release */ = {
+		8C56D8922F3BCC6100A9CD03 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kz.aitu.aruzhan.GlowUpTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -489,44 +451,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GlowUp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GlowUp";
-			};
-			name = Release;
-		};
-		8C56D82C2F3BB00C00A9CD03 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kz.aitu.aruzhan.GlowUpUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = GlowUp;
-			};
-			name = Debug;
-		};
-		8C56D82D2F3BB00C00A9CD03 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kz.aitu.aruzhan.GlowUpUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = GlowUp;
 			};
 			name = Release;
 		};
@@ -551,25 +475,68 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8C56D8282F3BB00C00A9CD03 /* Build configuration list for PBXNativeTarget "GlowUpTests" */ = {
+		8C56D8902F3BCC6100A9CD03 /* Build configuration list for PBXNativeTarget "GlowUpTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8C56D8292F3BB00C00A9CD03 /* Debug */,
-				8C56D82A2F3BB00C00A9CD03 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8C56D82B2F3BB00C00A9CD03 /* Build configuration list for PBXNativeTarget "GlowUpUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8C56D82C2F3BB00C00A9CD03 /* Debug */,
-				8C56D82D2F3BB00C00A9CD03 /* Release */,
+				8C56D8912F3BCC6100A9CD03 /* Debug */,
+				8C56D8922F3BCC6100A9CD03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8C56D8412F3BB25900A9CD03 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.6.2;
+			};
+		};
+		8C56D8642F3BBDC700A9CD03 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8C2CF8B62F3E81FB00023243 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C56D8642F3BBDC700A9CD03 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		8C2CF8B82F3E81FF00023243 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C56D8642F3BBDC700A9CD03 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		8C56D8422F3BB25900A9CD03 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C56D8412F3BB25900A9CD03 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		8C56D86A2F3BBF3E00A9CD03 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C56D8642F3BBDC700A9CD03 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		8C56D86C2F3BBF4200A9CD03 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C56D8642F3BBDC700A9CD03 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		8C56D86E2F3BBF5A00A9CD03 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C56D8642F3BBDC700A9CD03 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8C56D7F72F3BB00A00A9CD03 /* Project object */;
 }

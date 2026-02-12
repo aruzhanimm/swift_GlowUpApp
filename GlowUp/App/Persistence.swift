@@ -1,9 +1,3 @@
-//
-//  Persistence.swift
-//  GlowUp
-//
-//  Created by Аружан Картам on 10.02.2026.
-//
 
 import CoreData
 
@@ -14,9 +8,11 @@ struct PersistenceController {
     static let preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
-        for _ in 0..<10 {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
+        for i in 0..<10 {
+            let newFavorite = FavoriteProduct(context: viewContext)
+            newFavorite.name = "Sample Product \(i)"
+            newFavorite.id = Int64(i)
+            // You can set other properties as needed for your model
         }
         do {
             try viewContext.save()
@@ -55,3 +51,4 @@ struct PersistenceController {
         container.viewContext.automaticallyMergesChangesFromParent = true
     }
 }
+
