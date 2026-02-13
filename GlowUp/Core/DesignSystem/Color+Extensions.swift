@@ -1,28 +1,25 @@
 
 import SwiftUI
 
-// Это расширение (Extension) позволяет нам обращаться к цветам через Color.brandBlack
-// Мы не пишем hex-коды каждый раз, мы используем названия.
 extension Color {
     
-    // Глубокий черный фон (не совсем #000000, чуть мягче для глаз, как в премиум аппах)
+  
     static let backgroundDark = Color(hex: "0A0A0A")
     
-    // Вторичный фон (для карточек товаров)
+  
     static let cardDark = Color(hex: "1C1C1E")
     
-    // Твой акцентный неоново-розовый
+  
     static let neonPink = Color(hex: "FF00CC")
     
-    // Лавандовый акцент
+   
     static let neonLavender = Color(hex: "B98EFF")
     
-    // Белый текст (с легкой прозрачностью, чтобы не резало глаза)
+   
     static let textPrimary = Color.white
     static let textSecondary = Color.gray
 }
 
-// Вспомогательный код, чтобы Swift понимал HEX коды (вроде #FFFFFF)
 extension Color {
     init(hex: String) {
         let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)

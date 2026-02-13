@@ -1,7 +1,7 @@
 import Foundation
 import FirebaseAuth
-import FirebaseCrashlytics // Для отслеживания падений (Bonus +3)
-import FirebaseAnalytics   // Для аналитики событий (Bonus +3)
+import FirebaseCrashlytics
+import FirebaseAnalytics
 import SwiftUI
 import Combine
 
@@ -10,23 +10,23 @@ class AuthViewModel: ObservableObject {
     @Published var errorMessage: String? = nil
     @Published var isLoading: Bool = false
     
-    // Данные пользователя для отображения
+    
     @Published var userName: String = ""
     @Published var userPhotoURL: String = ""
     
     init() {
-        // Проверяем, входил ли юзер раньше
+      
         if let user = Auth.auth().currentUser {
             self.isUserLoggedIn = true
             self.userName = user.displayName ?? "No Name"
             self.userPhotoURL = user.photoURL?.absoluteString ?? ""
             
-            // Логируем, что юзер вернулся (Analytics)
+           
             Analytics.logEvent("session_start_auto", parameters: nil)
         }
     }
     
-    // --- Вход (Login) ---
+  
     func login(email: String, password: String) {
         isLoading = true
         errorMessage = nil
@@ -40,15 +40,14 @@ class AuthViewModel: ObservableObject {
                 self.isUserLoggedIn = true
                 self.fetchUserInfo()
                 
-                // Логируем успешный вход
+            
                 Analytics.logEvent(AnalyticsEventLogin, parameters: [
                     AnalyticsParameterMethod: "email"
                 ])
             }
         }
     }
-    
-    // --- Регистрация (Sign Up) ---
+  
     func signUp(email: String, password: String) {
         guard password.count >= 6 else {
             self.errorMessage = "Password must be at least 6 characters"
@@ -75,7 +74,7 @@ class AuthViewModel: ObservableObject {
         }
     }
     
-    // --- Выход (Sign Out) ---
+  
     func signOut() {
         do {
             try Auth.auth().signOut()
@@ -87,7 +86,7 @@ class AuthViewModel: ObservableObject {
         }
     }
     
-    // --- [CRUD] Обновление профиля (Update) ---
+  
     func updateProfile(name: String, photoURLString: String) {
         guard let user = Auth.auth().currentUser else { return }
         
@@ -95,7 +94,7 @@ class AuthViewModel: ObservableObject {
         let changeRequest = user.createProfileChangeRequest()
         changeRequest.displayName = name
         
-        // Если строка не пустая, пробуем сделать из нее URL
+      
         if !photoURLString.isEmpty {
             changeRequest.photoURL = URL(string: photoURLString)
         }
@@ -105,7 +104,7 @@ class AuthViewModel: ObservableObject {
             if let error = error {
                 self.handleError(error, context: "UpdateProfile")
             } else {
-                // Обновляем локальные данные
+                
                 self.userName = name
                 self.userPhotoURL = photoURLString
                 
@@ -115,7 +114,7 @@ class AuthViewModel: ObservableObject {
         }
     }
     
-    // --- [CRUD] Удаление аккаунта (Delete) ---
+  
     func deleteAccount() {
         guard let user = Auth.auth().currentUser else { return }
         
@@ -124,7 +123,7 @@ class AuthViewModel: ObservableObject {
         user.delete { error in
             self.isLoading = false
             if let error = error {
-                // ВАЖНО: Удаление требует недавнего входа. Если юзер давно зашел, Firebase попросит перелогиниться.
+                
                 self.handleError(error, context: "DeleteAccount")
                 self.errorMessage = "Please log out and log in again to delete account."
             } else {
@@ -133,8 +132,7 @@ class AuthViewModel: ObservableObject {
             }
         }
     }
-    
-    // Вспомогательная функция для обновления UI
+
     private func fetchUserInfo() {
         if let user = Auth.auth().currentUser {
             self.userName = user.displayName ?? ""
@@ -142,14 +140,14 @@ class AuthViewModel: ObservableObject {
         }
     }
     
-    // --- Стратегия логирования (Logging Strategy) ---
+
     private func handleError(_ error: Error, context: String) {
         self.errorMessage = error.localizedDescription
         
-        // 1. Отправляем ошибку в Crashlytics (чтобы видеть в консоли Firebase)
+     
         Crashlytics.crashlytics().record(error: error)
         
-        // 2. Логируем в консоль разработчика с меткой
+
         print(" ERROR [\(context)]: \(error.localizedDescription)")
     }
 }

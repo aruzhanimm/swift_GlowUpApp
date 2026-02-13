@@ -5,8 +5,7 @@ struct SearchView: View {
     @StateObject private var viewModel = SearchViewModel()
     
     let columns = [GridItem(.flexible(), spacing: 16), GridItem(.flexible(), spacing: 16)]
-    
-    // Список категорий, которые поддерживает API
+   
     let categories = ["Mascara", "Lipstick", "Foundation", "Eyeliner", "Eyeshadow", "Blush"]
     
     var body: some View {
@@ -15,7 +14,7 @@ struct SearchView: View {
                 Color.backgroundDark.ignoresSafeArea()
                 
                 VStack(spacing: 0) {
-                    // --- 1. Поисковая строка ---
+                  
                     HStack {
                         Image(systemName: "magnifyingglass")
                             .foregroundColor(.gray)
@@ -36,7 +35,7 @@ struct SearchView: View {
                     .padding(.horizontal)
                     .padding(.top)
                     
-                    // --- 2. Фильтры (Категории) ---
+                   
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 10) {
                             ForEach(categories, id: \.self) { category in
@@ -49,7 +48,7 @@ struct SearchView: View {
                                         .padding(.horizontal, 16)
                                         .padding(.vertical, 8)
                                         .background(
-                                            // Если выбрано - розовый, если нет - темно-серый
+                                           
                                             viewModel.selectedCategory == category ? Color.neonPink : Color.cardDark
                                         )
                                         .foregroundColor(
@@ -67,7 +66,7 @@ struct SearchView: View {
                         .padding(.vertical, 10)
                     }
                     
-                    // --- 3. Результаты ---
+               
                     if viewModel.isLoading {
                         Spacer()
                         ProgressView()

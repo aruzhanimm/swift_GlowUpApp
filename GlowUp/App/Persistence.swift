@@ -12,7 +12,7 @@ struct PersistenceController {
             let newFavorite = FavoriteProduct(context: viewContext)
             newFavorite.name = "Sample Product \(i)"
             newFavorite.id = Int64(i)
-            // You can set other properties as needed for your model
+        
         }
         do {
             try viewContext.save()

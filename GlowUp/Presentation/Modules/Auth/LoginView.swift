@@ -1,9 +1,3 @@
-//
-//  LoginView.swift
-//  GlowUp
-//
-//  Created by Аружан Картам on 11.02.2026.
-//
 
 import SwiftUI
 
@@ -12,13 +6,13 @@ struct LoginView: View {
     
     @State private var email = ""
     @State private var password = ""
-    @State private var isSignUpMode = false // Переключатель Вход/Регистрация
+    @State private var isSignUpMode = false
     
     var body: some View {
         ZStack {
             Color.backgroundDark.ignoresSafeArea()
             
-            // Фоновые круги для красоты (Glow effect)
+           
             Circle()
                 .fill(Color.neonPink.opacity(0.2))
                 .frame(width: 200, height: 200)
@@ -37,10 +31,10 @@ struct LoginView: View {
                     .foregroundColor(.white)
                     .padding(.bottom, 30)
                 
-                // Поле Email
+                
                 CustomTextField(icon: "envelope", placeholder: "Email", text: $email)
                 
-                // Поле Пароль
+                
                 CustomTextField(icon: "lock", placeholder: "Password", text: $password, isSecure: true)
                 
                 if let error = viewModel.errorMessage {
@@ -73,7 +67,7 @@ struct LoginView: View {
                 .shadow(color: .neonPink.opacity(0.5), radius: 10, x: 0, y: 5)
                 .padding(.top, 10)
                 
-                // Кнопка переключения режима
+               
                 Button(action: {
                     withAnimation {
                         isSignUpMode.toggle()
@@ -90,7 +84,6 @@ struct LoginView: View {
     }
 }
 
-// Компонент красивого текстового поля
 struct CustomTextField: View {
     var icon: String
     var placeholder: String

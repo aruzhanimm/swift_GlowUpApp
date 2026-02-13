@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct LaunchScreenView: View {
-    // 1. Получаем доступ к AuthViewModel
+    
     @EnvironmentObject var authViewModel: AuthViewModel
     
     @State private var isActive = false
@@ -10,14 +10,14 @@ struct LaunchScreenView: View {
     
     var body: some View {
         if isActive {
-            // 2. Логика маршрутизации ПОСЛЕ заставки
+            
             if authViewModel.isUserLoggedIn {
                 MainTabView()
             } else {
                 LoginView()
             }
         } else {
-            // ЭКРАН ЗАСТАВКИ (Анимация)
+            
             ZStack {
                 Color.backgroundDark.ignoresSafeArea()
                 
@@ -41,7 +41,7 @@ struct LaunchScreenView: View {
                 }
             }
             .onAppear {
-                // Ждем 2 секунды и переключаем
+                
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                     withAnimation {
                         self.isActive = true

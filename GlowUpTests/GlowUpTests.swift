@@ -107,34 +107,28 @@ final class GlowUpTests: XCTestCase {
         XCTAssertEqual(dict["userName"] as? String, "User")
         XCTAssertEqual(dict["text"] as? String, "Hello")
     }
-    // --- Тесты для AuthViewModel ---
+
         
-        // 1. Проверка валидации имейла (простая)
         func testEmailValidation() {
             let invalidEmail = "test"
             let validEmail = "test@example.com"
-            
-            // Тут можно проверить твою кастомную логику валидации, если она есть.
-            // Если нет, можно проверить, что поле не пустое.
+  
             XCTAssertFalse(invalidEmail.contains("@") && invalidEmail.contains("."), "Email validation should fail")
             XCTAssertTrue(validEmail.contains("@"), "Email should contain @")
         }
 
-        // 2. Проверка инициализации ViewModel
         func testAuthViewModelInit() {
             let viewModel = AuthViewModel()
             XCTAssertFalse(viewModel.isLoading, "Loading should be false initially")
             XCTAssertNil(viewModel.errorMessage, "Error message should be nil initially")
         }
 
-        // 3. Тест форматирования цены (еще один кейс)
         func testPriceFormattingZero() {
             let product = Product(id: 99, brand: "x", name: "x", price: "0.0", image_link: nil, description: nil, product_type: nil, rating: nil)
             XCTAssertEqual(product.priceInTenge, "₸ 0", "Zero price should be handled correctly")
         }
         
-        // 4. Тест модели User (если создадим такую модель локально)
-        // Или тест конвертации URL
+
         func testURLStringSafety() {
             let brokenLink = ""
             let product = Product(id: 5, brand: "x", name: "x", price: nil, image_link: brokenLink, description: nil, product_type: nil, rating: nil)

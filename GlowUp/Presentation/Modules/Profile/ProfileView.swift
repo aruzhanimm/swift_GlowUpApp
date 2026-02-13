@@ -5,12 +5,10 @@ import FirebaseAuth
 struct ProfileView: View {
     @EnvironmentObject var authViewModel: AuthViewModel
     
-    // Состояния для редактирования
     @State private var isEditing: Bool = false
     @State private var editedName: String = ""
     @State private var editedPhotoURL: String = ""
-    
-    // Состояние для алерта удаления
+
     @State private var showDeleteAlert: Bool = false
     
     var body: some View {
@@ -21,7 +19,7 @@ struct ProfileView: View {
                 ScrollView {
                     VStack(spacing: 30) {
                         
-                        // --- 1. Аватарка ---
+                        
                         if !authViewModel.userPhotoURL.isEmpty, let url = URL(string: authViewModel.userPhotoURL) {
                             KFImage(url)
                                 .placeholder {
@@ -43,7 +41,7 @@ struct ProfileView: View {
                                 .padding(.top, 50)
                         }
                         
-                        // --- 2. Информация / Редактирование ---
+                      
                         if isEditing {
                             VStack(spacing: 15) {
                                 TextField("Enter Nickname", text: $editedName)
@@ -101,9 +99,9 @@ struct ProfileView: View {
                         
                         Divider().background(Color.gray)
                         
-                        // --- 3. Меню действий ---
+                       
                         VStack(spacing: 0) {
-                            // Кнопка выхода
+                           
                             Button(action: {
                                 authViewModel.signOut()
                             }) {
@@ -119,7 +117,7 @@ struct ProfileView: View {
                             
                             Divider().background(Color.gray.opacity(0.3))
                             
-                            // Кнопка удаления (ОПАСНАЯ ЗОНА)
+                           
                             Button(action: {
                                 showDeleteAlert = true
                             }) {
